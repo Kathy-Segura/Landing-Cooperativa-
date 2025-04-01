@@ -713,7 +713,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Basic Grains Section */}
+    {/* Basic Grains Section */}
         <section id="granos" className="py-24">
           <div className="container mx-auto px-4">
             <div className="mb-16 text-center">
@@ -728,32 +728,17 @@ export default function LandingPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-              <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  src="/granosbasicos.jpg?height=800&width=800"
-                  alt="Granos Básicos de Estelí"
-                  width={800}
-                  height={800}
-                  className="w-full rounded-2xl object-cover"
-                />
-              </div>
-
-              <div className="space-y-8">
+              {/* Imágenes pequeñas alineadas a la derecha */}
+              <div className="space-y-8 ml-auto">
                 {/* Grain Product 1 */}
                 <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
-                    <Image
-                      src="/frijoles.jpg?height=200&width=200"
-                      alt="Frijol Rojo"
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src="/frijoles.jpg?height=200&width=200" alt="Frijol Rojo" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 text-lg font-bold text-gray-900">Frijol Rojo</h3>
                     <p className="mb-3 text-sm text-gray-600">
-                      Frijol rojo tradicional nicaragüense, con excelente sabor y textura. Ideal para gallo pinto y
-                      otros platos típicos.
+                      Frijol rojo tradicional nicaragüense, con excelente sabor y textura. Ideal para gallo pinto y otros platos típicos.
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-base font-bold text-yellow-700">$2.99 / lb</span>
@@ -767,12 +752,7 @@ export default function LandingPage() {
                 {/* Grain Product 2 */}
                 <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
-                    <Image
-                      src="/maiz.jpg?height=200&width=200"
-                      alt="Maíz Criollo"
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src="/maiz.jpg?height=200&width=200" alt="Maíz Criollo" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 text-lg font-bold text-gray-900">Maíz Criollo</h3>
@@ -791,12 +771,7 @@ export default function LandingPage() {
                 {/* Grain Product 3 */}
                 <div className="group flex gap-6 rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md">
                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
-                    <Image
-                      src="/arroz.jpg?height=200&width=200"
-                      alt="Arroz de Secano"
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src="/arroz.jpg?height=200&width=200" alt="Arroz de Secano" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 text-lg font-bold text-gray-900">Arroz de Secano</h3>
@@ -818,10 +793,9 @@ export default function LandingPage() {
                     <Image src="/sorgo.jpg?height=200&width=200" alt="Sorgo" fill className="object-cover" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-2 tSext-lg font-bold text-gray-900">Sorgo</h3>
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">Sorgo</h3>
                     <p className="mb-3 text-sm text-gray-600">
-                      Cereal resistente a la sequía, utilizado para alimentación animal y elaboración de productos
-                      tradicionales.
+                      Cereal resistente a la sequía, utilizado para alimentación animal y elaboración de productos tradicionales.
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-base font-bold text-yellow-700">$1.79 / lb</span>
@@ -832,9 +806,35 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Contenedor de imágenes grandes */}
+              <div className="space-y-8">
+                {/* Imagen grande 1 */}
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/granosmaiz.jpg"
+                    alt="Granos Básicos"
+                    width={800}
+                    height={600}
+                    className="w-full rounded-2xl object-cover"
+                  />
+                </div>
+
+                {/* Imagen grande 2 (Debajo de la primera) */}
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/granosfrijoles.jpg"
+                    alt="Granos Básicos Adicional"
+                    width={800}
+                    height={600}
+                    className="w-full rounded-2xl object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
 
         {/* Vegetables Section */}
         <section id="hortalizas" className="py-24 bg-green-50">
@@ -1018,100 +1018,25 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Production Process */}
-        <section id="proceso" className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="mb-16 text-center">
-              <span className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-blue-800 mb-4">
-                Nuestro Proceso
-              </span>
-              <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">Del Campo a Su Mesa</h2>
-              <p className="mx-auto max-w-3xl text-lg text-gray-600">
-                Conozca el cuidadoso proceso que seguimos para garantizar la calidad y frescura de todos nuestros
-                productos agrícolas.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-              {/* Process Step 1 */}
-              <div className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                  <span className="text-2xl font-bold">1</span>
-                </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900">Cultivo Sostenible</h3>
-                <p className="text-gray-600">
-                  Utilizamos técnicas agrícolas sostenibles que respetan el medio ambiente y conservan los recursos
-                  naturales.
-                </p>
-              </div>
-
-              {/* Process Step 2 */}
-              <div className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                  <span className="text-2xl font-bold">2</span>
-                </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900">Cosecha Selectiva</h3>
-                <p className="text-gray-600">
-                  Cada producto es cosechado en su punto óptimo de madurez para garantizar el mejor sabor y calidad.
-                </p>
-              </div>
-
-              {/* Process Step 3 */}
-              <div className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                  <span className="text-2xl font-bold">3</span>
-                </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900">Control de Calidad</h3>
-                <p className="text-gray-600">
-                  Todos nuestros productos pasan por un riguroso control de calidad antes de ser empacados y
-                  distribuidos.
-                </p>
-              </div>
-
-              {/* Process Step 4 */}
-              <div className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                  <span className="text-2xl font-bold">4</span>
-                </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900">Distribución Eficiente</h3>
-                <p className="text-gray-600">
-                  Contamos con una red de distribución eficiente que garantiza que nuestros productos lleguen frescos a
-                  su destino.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-20">
-              <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  src="/placeholder.svg?height=600&width=1200"
-                  alt="Proceso de Producción"
-                  width={1200}
-                  height={600}
-                  className="w-full rounded-2xl object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-blue-700 shadow-lg transition hover:bg-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-8 w-8"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+     {/* Video representativo */}
+    <section className="flex justify-center mt-20">
+      <div 
+        className="relative w-full max-w-4xl overflow-hidden rounded-2xl"
+        style={{
+          backgroundImage: "url('/papa.jpg')", // Imagen de fondo
+          backgroundSize: "cover", 
+          backgroundPosition: "center",
+          height: "400px" // Ajuste de altura
+        }}
+      >
+        <video 
+          src="/vid-diosas.mp4" 
+          controls 
+          poster="/diosas.png"
+          className="w-full h-full rounded-2xl object-cover"
+        ></video>
+      </div>
+    </section>
 
         {/* Certifications */}
         <section id="certificaciones" className="py-24 bg-gray-50">
@@ -1132,7 +1057,7 @@ export default function LandingPage() {
               <div className="rounded-2xl bg-white p-8 shadow-md">
                 <div className="mb-6 h-16 w-16">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/organico.jpg?height=100&width=100"
                     alt="Certificación Orgánica"
                     width={64}
                     height={64}
@@ -1148,7 +1073,7 @@ export default function LandingPage() {
               {/* Certification 2 */}
               <div className="rounded-2xl bg-white p-8 shadow-md">
                 <div className="mb-6 h-16 w-16">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Comercio Justo" width={64} height={64} />
+                  <Image src="/comercio.jpg?height=100&width=100" alt="Comercio Justo" width={64} height={64} />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-gray-900">Comercio Justo</h3>
                 <p className="text-gray-600">
@@ -1160,7 +1085,7 @@ export default function LandingPage() {
               {/* Certification 3 */}
               <div className="rounded-2xl bg-white p-8 shadow-md">
                 <div className="mb-6 h-16 w-16">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Rainforest Alliance" width={64} height={64} />
+                  <Image src="/rainforest.jpg?height=100&width=100" alt="Rainforest Alliance" width={64} height={64} />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-gray-900">Rainforest Alliance</h3>
                 <p className="text-gray-600">
@@ -1494,16 +1419,6 @@ export default function LandingPage() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-8 rounded-2xl overflow-hidden">
-                    <Image
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Mapa de ubicación"
-                      width={600}
-                      height={400}
-                      className="w-full h-64 object-cover"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -1518,7 +1433,7 @@ export default function LandingPage() {
               <div className="mb-6 flex items-center gap-2">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full bg-green-100">
                   <Image
-                    src="/placeholder.svg?height=40&width=40"
+                    src="/coop.png?height=40&width=40"
                     alt="Logo"
                     width={40}
                     height={40}
